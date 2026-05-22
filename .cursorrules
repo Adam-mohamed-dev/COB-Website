@@ -1,0 +1,44 @@
+# Project Rules & Best Practices
+
+## Tech Stack
+- Next.js 16 (App Router)
+- Tailwind CSS 4
+- TypeScript
+- Zustand (State Management)
+- TanStack Query (Data Fetching)
+- Zod (Validation)
+- next-intl (Localization)
+
+## Core Principles
+1. **TypeScript First**: Always use strong typing. Define interfaces/types for all props and data structures.
+2. **Component Structure**:
+   - Prefer Server Components for data fetching.
+   - Use `'use client'` strictly for interactive components.
+   - Keep components small and focused.
+3. **Styling**:
+   - Use Tailwind CSS 4 utility classes.
+   - Maintain the design system defined in `globals.css`.
+   - Font: Poppins.
+4. **Localization**:
+   - Never hardcode strings in the UI.
+   - Use `useTranslations` hook for all labels.
+5. **State Management**:
+   - Use Zustand for global UI state.
+   - Use TanStack Query for server state/caching.
+6. **Validation**:
+   - Use Zod schemas for all external data and form validation.
+7. **SEO & Accessibility**:
+   - Use semantic HTML (header, main, footer, section, etc.).
+   - Every page MUST have a descriptive title and meta description using Next.js Metadata API.
+   - Images must have `alt` text.
+   - Maintain a logical heading hierarchy (H1 -> H2 -> H3).
+8. **Performance**:
+   - Optimize images with `next/image`.
+   - Minimize use of client-side JavaScript.
+   - Ensure fast First Contentful Paint (FCP) and low Cumulative Layout Shift (CLS).
+
+## Naming Conventions
+- Components: PascalCase (e.g., `UserCard.tsx`)
+- Hooks: camelCase (e.g., `useUserData.ts`)
+- Utilities: camelCase (e.g., `formatDate.ts`)
+- Directories: kebab-case (e.g., `user-profile`)

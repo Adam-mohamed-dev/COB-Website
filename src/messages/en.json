@@ -1,0 +1,368 @@
+{
+  "Navbar": {
+    "solutions": "Solutions",
+    "productsSolutions": "Products & Solutions",
+    "services": "Services",
+    "industries": "Industries",
+    "company": "Company",
+    "about": "About Us",
+    "articles": "Articles",
+    "faq": "FAQ",
+    "contact": "Contact Us",
+    "bookMeeting": "Book a Consultation",
+    "phone": "(929) 229-7207",
+    "phoneAria": "Call COB Operations at (929) 229-7207"
+  },
+  "Hero": {
+    "badge": "Healthcare Revenue Cycle Management",
+    "title": "Staffing, Tech, Operations.",
+    "titleGradient": "We Do Everything in Healthcare",
+    "description": "From hiring providers and building secure systems to medical billing and support—COB handles it all.",
+    "inputPlaceholder": "Enter your professional email",
+    "cta": "Get Started",
+    "bookConsultation": "Book a Consultation",
+    "exploreSolutions": "Explore Solutions",
+    "security": "Medical Billing • Claims Management • Appeals",
+    "stat1": "98%",
+    "stat1Label": "Clean Claim Rate",
+    "stat2": "30%",
+    "stat2Label": "Revenue Increase",
+    "stat3": "45%",
+    "stat3Label": "Fewer Denials",
+    "stat4": "500+",
+    "stat4Label": "Happy Clients",
+    "float1Label": "Claims Processed",
+    "float1Value": "12,480",
+    "float2Label": "Auth Approvals",
+    "float2Value": "96.4%",
+    "Form": {
+      "title": "Book Your <free>Free</free> Strategy Session",
+      "subtext": "1 h • No commitment • Tailored to your practice (929) 229-7207",
+      "stepDetails": "Your Details",
+      "stepSchedule": "Pick a Time",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "organization": "Organization",
+      "organizationType": "Organization Type",
+      "workEmail": "Work Email",
+      "firstNamePlaceholder": "e.g. Sarah",
+      "lastNamePlaceholder": "e.g. Johnson",
+      "organizationPlaceholder": "e.g. Manhattan Outpatient Clinic",
+      "emailPlaceholder": "sarah@clinic.com",
+      "orgClinic": "Clinic",
+      "orgLab": "Clinical Lab",
+      "orgHospital": "Hospital",
+      "orgOther": "Other",
+      "cartTitle": "Selected Solutions Cart ({count})",
+      "cartPriority": "Priority Focus",
+      "cartEmpty": "Your cart is currently empty. Explore our 7 solutions below to add them to your consultation!",
+      "removeSolution": "Remove solution",
+      "submit": "Reserve My Strategy Call",
+      "confirmBooking": "Confirm Reservation",
+      "back": "Back",
+      "close": "Close",
+      "scheduleTitle": "Select your preferred date",
+      "scheduleSubtitle": "Weekdays only. All times shown in your local timezone.",
+      "timeSlotsLabel": "Available time slots",
+      "selectDateFirst": "Choose a date above to see available times.",
+      "prevMonth": "Previous month",
+      "nextMonth": "Next month",
+      "errorRequired": "Please fill in your name and work email to continue.",
+      "errorEmail": "Please enter a valid work email address.",
+      "errorSchedule": "Please select both a date and a time slot.",
+      "successTitle": "You're booked!",
+      "successMessage": "Your strategy session is reserved. We'll send a calendar invite to your work email shortly.",
+      "successClose": "Done"
+    }
+  },
+  "Solutions": {
+    "badge": "Solutions Explorer",
+    "title": "Products & Solutions",
+    "description": "Navigate and explore our core revenue cycle solutions tailored for every practice touchpoint. Highly organized, incredibly transparent, and built to scale.",
+    "core": {
+      "tab": "Revenue Maximization & Protection",
+      "badge": "Core Operations",
+      "title": "Precision Billing & Coding Architecture",
+      "description": "Say goodbye to manual claim bottlenecks. Our automated clearinghouse integration ensures claims are scrubbed, formatted, and submitted with zero friction.",
+      "features": [
+        "99.2% Clean Claim Rate",
+        "Real-Time Eligibility Checking",
+        "Automated Prior Authorizations",
+        "Digital Patient Statements",
+        "Precision CPT/ICD-10 Auditing",
+        "Rapid Electronic Submissions"
+      ],
+      "action": "Optimize My Billing Now",
+      "whatItIs": "A comprehensive financial architecture designed to capture, track, and collect every dollar your practice earns. We deploy highly trained medical coders and advanced software to eliminate claim errors and accelerate cash flow.",
+      "whyChoose": "Because missed charges and denied claims bleed practice revenue. We provide a transparent, end-to-end pipeline that ensures maximum reimbursement with zero operational friction for your providers.",
+      "subcategories": [
+        "Advanced Medical Billing & Revenue Recovery",
+        "Real-Time Eligibility & Coverage Verification",
+        "Authorizations & MNR Management",
+        "Specialized Compliance & Coding Audits",
+        "Live Medical Coding",
+        "Patient Financial Counseling & Payment Plans"
+      ],
+      "successStory": {
+        "facility": "National Cardiology Network",
+        "challenge": "High denial rates on complex cardiac imaging claims causing cash flow constraints.",
+        "result": "Implemented real-time scrubbing and live coding audits, resulting in a massive drop in denials and accelerated cash flow.",
+        "metric": "-90%",
+        "metricLabel": "Denial Rate Reduction"
+      }
+    },
+    "revops": {
+      "tab": "Patient Engagement & Growth Ecosystem",
+      "badge": "Revenue Protection",
+      "title": "Advanced Denial Analytics & A/R Recovery",
+      "description": "Prevent lost revenue before it happens. Our intelligent denial engine detects payer rejection patterns and instantly initiates automated appeals.",
+      "features": [
+        "Predictive Denial Prevention",
+        "Automated Appeal Filing",
+        "Aging A/R Recovery Systems",
+        "Payer Underpayment Alerts",
+        "Contract Auditing Tools",
+        "Fee Schedule Optimization"
+      ],
+      "action": "Recover My Denials Now",
+      "whatItIs": "An interconnected ecosystem of digital tools and virtual staff aimed at elevating the patient journey. From the first phone call to post-visit follow-ups, we manage the entire patient experience.",
+      "whyChoose": "Patient retention is practice growth. Modern patients demand seamless, digital-first experiences. Our ecosystem modernizes your front desk, keeping patients engaged and returning.",
+      "subcategories": [
+        "Patient Concierge & Retention",
+        "Virtual Front Desk Operations",
+        "Telehealth Coordination & Virtual Visit Operations",
+        "Referral Coordination",
+        "Digital Marketing & Practice Visibility",
+        "Elevate Unified Cloud Communications"
+      ],
+      "successStory": {
+        "facility": "Metro Orthopedic Group",
+        "challenge": "Severe patient scheduling backlogs and high call abandonment rates due to coordinator shortages.",
+        "result": "Deployed virtual front desk operators and integrated cloud communications, completely eliminating wait times.",
+        "metric": "0 Min",
+        "metricLabel": "Call Wait Times"
+      }
+    },
+    "practice": {
+      "tab": "Practice Infrastructure & Strategic Operations",
+      "badge": "Practice Growth",
+      "title": "EHR Synchronization & Strategy Audits",
+      "description": "Connect clinical actions directly to revenue outcomes. Our deep EHR integration syncs provider activity in real-time, removing dual-entry overhead.",
+      "features": [
+        "Bidirectional EHR Syncing",
+        "Smart Doctor-Patient Scheduling",
+        "Payer Credentialing & Enrollment",
+        "Real-Time Custom KPI Dashboards",
+        "Operational Performance Audits",
+        "Payer Contract Compliance"
+      ],
+      "action": "Streamline My Practice Now",
+      "whatItIs": "The foundational operations that keep a medical practice legally compliant and financially sound. We handle the heavy lifting of credentialing, bookkeeping, HR, and payroll.",
+      "whyChoose": "Doctors should focus on medicine, not payroll or payer credentialing. We remove the administrative burden so your clinical team can operate at the top of their licenses.",
+      "subcategories": [
+        "Credentialing & Provider Network Management",
+        "Healthcare Financial Management (payroll, bookkeeping, tax filing, FP&A, AP/AR, valuation)",
+        "Practice HR Operations & Workforce Planning"
+      ],
+      "successStory": {
+        "facility": "Houston Surgical Partners",
+        "challenge": "Delayed provider starts due to complex payer credentialing backlogs taking 90+ days.",
+        "result": "Deployed our specialized credentialing team to accelerate payer enrollment and network management.",
+        "metric": "8 Days",
+        "metricLabel": "Payer Credentialing SLA"
+      }
+    },
+    "specialized": {
+      "tab": "COB Innovation Lab & Enterprise Solutions",
+      "badge": "Clinical RCM Specialties",
+      "title": "Tailored Billing for Complex Facilities",
+      "description": "Every specialty has its unique RCM constraints. We provide purpose-built billing pipelines tailored for high-volume clinical labs, outpatient centers, and pharmacy audits.",
+      "features": [
+        "High-Volume Diagnostic Billing",
+        "PBM Drug Claim Audits",
+        "Outpatient Billing Automations",
+        "Multi-Specialty Charge Capture",
+        "Complex Specialty Compliance",
+        "Lab EHR Intake APIs"
+      ],
+      "action": "Explore Specialty Care Now",
+      "whatItIs": "Tailored operational and analytical solutions for complex, enterprise-level healthcare organizations. We build custom BPO workflows, design SOPs, and deploy advanced BI dashboards.",
+      "whyChoose": "Off-the-shelf solutions fail at scale. We architect custom, data-driven operational pipelines specifically for high-volume enterprise health networks.",
+      "subcategories": [
+        "Custom Enterprise BPO & Tailored Operations",
+        "Virtual Medical Assistants (experienced PTs as virtual assistants to in-clinic PTs)",
+        "Healthcare Data Analytics & BI",
+        "Process Architecture & SOP Design"
+      ],
+      "successStory": {
+        "facility": "Apex Enterprise Health",
+        "challenge": "Lack of centralized reporting and fragmented SOPs across 40+ clinical locations.",
+        "result": "Built a centralized BI dashboard and unified SOP architecture, unlocking deep operational visibility.",
+        "metric": "100%",
+        "metricLabel": "Operational Visibility"
+      }
+    },
+    "consulting": {
+      "tab": "Executive Consulting & Tailored Business Development",
+      "description": "Expert advisory services spanning healthcare compliance, operations consultation, business development outsourcing, and M&A diligence.",
+      "action": "Consult With Us",
+      "whatItIs": "High-level strategic advisory for healthcare executives. We provide blueprints for compliance, operational optimization, and aggressive growth through M&A diligence.",
+      "whyChoose": "Navigating healthcare regulations and scaling operations requires specialized expertise. Our consultants have decades of experience driving clinical expansions.",
+      "subcategories": [
+        "Healthcare Compliance Management & Advisory",
+        "Healthcare Operations & RCM Consultation",
+        "Healthcare Business Development Outsourcing",
+        "Referrals Network Management & Growth",
+        "M&A Diligence & Post-Acquisition Integration"
+      ],
+      "successStory": {
+        "facility": "Vanguard Medical Systems",
+        "challenge": "Regulatory uncertainty and operational bottlenecks during a rapid multi-state expansion.",
+        "result": "Provided comprehensive M&A diligence and compliance blueprints, ensuring flawless acquisition integrations.",
+        "metric": "4x",
+        "metricLabel": "Growth Velocity"
+      }
+    },
+    "technology": {
+      "tab": "Software Solutions & Technology Platform",
+      "description": "Proprietary EMR products, marketing & referrals CRM setup, and robust data cloud services for modern medical practices.",
+      "action": "Explore Technology",
+      "whatItIs": "Next-generation healthcare software infrastructure. We implement, migrate, and optimize EMRs, CRMs, and secure data clouds to modernize your clinical workflows.",
+      "whyChoose": "Outdated technology slows down care and risks HIPAA compliance. We deploy state-of-the-art platforms that are fast, secure, and fully interoperable.",
+      "subcategories": [
+        "Proprietary EMR Product",
+        "Marketing & Referrals CRM Setup",
+        "Data Cloud Services"
+      ],
+      "successStory": {
+        "facility": "Radiant Diagnostics",
+        "challenge": "Legacy on-premise servers causing data silos and frequent downtime across labs.",
+        "result": "Migrated the entire network to our secure data cloud and optimized their CRM for high-speed referrals.",
+        "metric": "99.99%",
+        "metricLabel": "Cloud Uptime"
+      }
+    },
+    "outsourcing": {
+      "tab": "Dedicated Outsourcing Services",
+      "description": "Full-time staff allocated exclusively to one client — coders, billers, customer support, and medical representatives. Distinct delivery model from the project-based services.",
+      "action": "Build Your Dedicated Team",
+      "whatItIs": "A distinct delivery model providing full-time, dedicated staff allocated exclusively to your organization. These aren't project-based contractors; they are your fully integrated remote team.",
+      "whyChoose": "When you need consistent, long-term capacity without the overhead of local hiring. Our dedicated teams seamlessly integrate into your existing culture and software.",
+      "subcategories": [
+        "Medical Coders & Billers",
+        "Customer Support Representatives",
+        "Medical Representatives",
+        "Authorization Representatives",
+        "Other Functional Outsourcing Roles"
+      ],
+      "successStory": {
+        "facility": "Premier Healthcare Group",
+        "challenge": "Chronic local staffing shortages causing extreme burnout and claim backlogs.",
+        "result": "Deployed a dedicated team of 15 full-time coders and support reps, instantly resolving the backlog.",
+        "metric": "100%",
+        "metricLabel": "Staffing Fulfillment"
+      }
+    }
+  },
+  "WhyChoose": {
+    "badge": "Proven Impact & Milestones",
+    "title": "Key Milestones & Achievements",
+    "description": "We don't just speak about operational healthcare excellence—we measure it. Here is the verified track record of COB's unified ecosystem across medical practices.",
+    "pillar1Title": "$1.2B+ Claims Processed",
+    "pillar1Desc": "Ensuring immense financial velocity through direct clearinghouse API pathways, removing payer friction.",
+    "pillar2Title": "99.8% Clean Claim Rate",
+    "pillar2Desc": "Industry-defining claim scrubbing and validation precision powered by direct automated rules.",
+    "pillar3Title": "<15 Min Support SLA",
+    "pillar3Desc": "Rapid clinical operational support resolving provider, clinic, and billing inquiries in minutes.",
+    "pillar4Title": "10k+ Doctor Hours Scheduled",
+    "pillar4Desc": "Seamless clinical provider staffing, scheduling, and onboarding to keep clinics running."
+  },
+  "SuccessStories": {
+    "title": "Recent Success Stories",
+    "description": "See how medical practices and clinical networks partner with COB to optimize their operations, reduce denials, and elevate care delivery.",
+    "cta": "Read Case Study",
+    "story1": {
+      "facility": "Manhattan Cardiovascular: 90% Denial Reduction",
+      "specialty": "Cardiology RCM Success",
+      "challenge": "Overcame high denial rates on complex cardiac imaging claims.",
+      "solution": "Implemented real-time scrubbing, resulting in a 90% drop in denials and accelerated cash flow.",
+      "metric": "-90%",
+      "metricLabel": "Denial Rate Reduction"
+    },
+    "story2": {
+      "facility": "Houston Orthopedic: SLA Accelerated by 80%",
+      "specialty": "Operations Success",
+      "challenge": "Resolved severe patient scheduling backlogs and coordinator shortages.",
+      "solution": "Deployed custom EHR scheduling integrations, reducing credentialing times down to 8 days.",
+      "metric": "8 Days",
+      "metricLabel": "Payer Credentialing SLA"
+    },
+    "story3": {
+      "facility": "Apex Diagnostics: 99.4% Clean Claims Secured",
+      "specialty": "High-Volume Billing Success",
+      "challenge": "Eliminated coding inaccuracies across high-volume clinical diagnostic claims.",
+      "solution": "Integrated direct clearinghouse API pipelines, securing a 99.4% clean claim rate instantly.",
+      "metric": "99.4%",
+      "metricLabel": "Clean Claim Rate"
+    }
+  },
+  "Footer": {
+    "tagline": "Next-generation healthcare operations and automated billing infrastructures.",
+    "solutions": "Solutions",
+    "resources": "Resources",
+    "company": "Company",
+    "legal": "Legal",
+    "rights": "All rights reserved. HIPAA & BAA Compliant.",
+    "ctaTitle": "Ready to optimize operations?",
+    "ctaButton": "Book a Demo",
+    "core": "Core Platform",
+    "revops": "Revenue Operations",
+    "practice": "Practice Operations",
+    "specialized": "Specialized Billing",
+    "docs": "Documentation",
+    "success": "Success Stories",
+    "api": "API Reference",
+    "about": "About Us",
+    "contact": "Contact",
+    "careers": "Careers",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "baa": "BAA Agreement"
+  },
+  "Chatbot": {
+    "tooltip": "Chat with COB AI",
+    "greeting": "Hi! I am the COB Operations Assistant. How can I help optimize your healthcare billing today?",
+    "whatsappAria": "Chat with COB Operations on WhatsApp"
+  },
+  "SolutionPage": {
+    "suiteNavLabel": "Browse all solution suites",
+    "suiteNavTitle": "Explore All Solution Suites",
+    "suiteNavSubtitle": "Select another suite to compare capabilities or continue building your strategy plan.",
+    "currentSuite": "Viewing Now",
+    "suiteNumber": "Suite {number}"
+  },
+  "ServicePage": {
+    "breadcrumbLabel": "Back navigation",
+    "hipaaBadge": "HIPAA Compliant Workflows",
+    "slaBadge": "Dedicated SLA Tracking",
+    "addSuite": "Add Suite to Plan",
+    "suiteAdded": "Suite Added",
+    "bookConsultation": "Book a Consultation",
+    "overviewTitle": "What This Capability Delivers",
+    "overviewSubtitle": "Embedded inside {suite} for unified accountability.",
+    "backToSuite": "Back to Suite Overview",
+    "highlightsTitle": "Operational Highlights",
+    "highlightsSubtitle": "The tactical advantages activated when this layer goes live inside your organization.",
+    "deliverablesTitle": "Included Deliverables",
+    "deliverablesSubtitle": "Everything your leadership team receives from day one of deployment.",
+    "processTitle": "How We Deploy",
+    "processSubtitle": "A proven four-phase rollout designed for clinical environments.",
+    "relatedTitle": "More in Suite {number}",
+    "relatedSubtitle": "Explore related capabilities under {suite}.",
+    "suiteOverview": "Suite Overview",
+    "exploreCapability": "Explore Capability",
+    "ctaTitle": "Ready to activate {service}?",
+    "ctaDescription": "Book a strategy session and our specialists will map this capability to your exact clinical and revenue workflows.",
+    "ctaPrimary": "Book Strategy Session"
+  }
+}
