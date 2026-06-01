@@ -175,10 +175,6 @@ export default function Navbar() {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('hashchange', syncHash);
     };
-  }, []);
-
-  useEffect(() => {
-    setCurrentHash(window.location.hash);
   }, [pathname]);
 
   return (

@@ -17,8 +17,6 @@ import { ConsultationSchedulePicker } from '@/components/consultation/Consultati
 const ORG_TYPES = ['clinic', 'lab', 'hospital', 'other'] as const;
 type OrgType = (typeof ORG_TYPES)[number];
 
-const TOTAL_STEPS = 2;
-
 type ConsultationBookingFormProps = {
   onClose: () => void;
 };

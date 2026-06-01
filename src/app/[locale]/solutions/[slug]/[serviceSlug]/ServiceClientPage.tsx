@@ -26,7 +26,6 @@ interface Service {
 }
 
 interface Props {
-  locale: string;
   solution: SolutionDetail;
   service: Service;
 }

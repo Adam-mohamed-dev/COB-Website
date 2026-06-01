@@ -2,10 +2,9 @@
 
 import React, { useState, useEffect } from 'react';
 import {
-  X, User, Building2, Mail, Activity, Heart, FlaskConical, Stethoscope, Dna,
-  ArrowLeft, ChevronRight, ShoppingBag, Plus, Minus, Trash2, Calendar, Check
+  ChevronRight, Plus, Check
 } from 'lucide-react';
-import { SolutionDetail, solutionsData } from '@/lib/solutions-data';
+import { SolutionDetail } from '@/lib/solutions-data';
 import { getSolutionBackgroundImage } from '@/lib/solution-utils';
 import { useConsultationStore } from '@/store/useConsultationStore';
 import { Link } from '@/i18n/routing';
@@ -14,23 +13,14 @@ import { SolutionSuiteNav } from '@/components/solutions/SolutionSuiteNav';
 
 interface Props {
   solution: SolutionDetail;
-  locale: string;
 }
 
-export default function SolutionClientPage({ solution, locale }: Props) {
+export default function SolutionClientPage({ solution }: Props) {
   const {
     selectedSolutions,
-    isFormOpen,
     toggleSolution,
-    setFormOpen,
-    removeSolution
+    setFormOpen
   } = useConsultationStore();
-
-  const [selectedOrgType, setSelectedOrgType] = useState<string>('');
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [organization, setOrganization] = useState('');
-  const [email, setEmail] = useState('');
 
   // Scroll Animation States
   const [heroVisible, setHeroVisible] = useState(false);
@@ -77,21 +67,7 @@ export default function SolutionClientPage({ solution, locale }: Props) {
     return () => clearTimeout(timer);
   }, []);
 
-  // Icon mapper
-  const renderIcon = (iconName: string, className: string = "w-6 h-6") => {
-    switch (iconName) {
-      case "Activity": return <Activity className={className} />;
-      case "Heart": return <Heart className={className} />;
-      case "Building2": return <Building2 className={className} />;
-      case "FlaskConical": return <FlaskConical className={className} />;
-      case "Stethoscope": return <Stethoscope className={className} />;
-      case "Dna": return <Dna className={className} />;
-      default: return <Activity className={className} />;
-    }
-  };
-
   const isSelected = selectedSolutions.includes(solution.slug);
-  const cartCount = selectedSolutions.length;
 
   const bgImageSrc = getSolutionBackgroundImage(solution.slug);
 

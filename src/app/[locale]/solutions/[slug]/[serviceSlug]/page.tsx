@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function ServicePage({ params }: Props) {
-  const { locale, slug, serviceSlug } = await params;
+  const { slug, serviceSlug } = await params;
   const solution = solutionsData[slug];
 
   if (!solution) {
@@ -56,7 +56,6 @@ export default async function ServicePage({ params }: Props) {
 
   return (
     <ServiceClientPage
-      locale={locale}
       solution={solution}
       service={service}
     />

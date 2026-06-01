@@ -23,12 +23,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function SolutionDetailPage({ params }: Props) {
-  const { locale, slug } = await params;
+  const { slug } = await params;
   const solution = solutionsData[slug];
 
   if (!solution) {
     notFound();
   }
 
-  return <SolutionClientPage solution={solution} locale={locale} />;
+  return <SolutionClientPage solution={solution} />;
 }
