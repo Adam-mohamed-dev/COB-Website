@@ -47,55 +47,73 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Column 2: Solutions */}
+            {/* Column 2: Products & Solutions (suites 1-4) */}
             <div className="space-y-5">
               <h4 className="text-xs font-black uppercase tracking-widest text-white">
-                {tf('solutions')}
+                {tf('products')}
               </h4>
               <ul className="space-y-3 text-xs font-semibold text-white/80">
-                <li className="hover:text-white transition-colors cursor-pointer">{tf('core')}</li>
-                <li className="hover:text-white transition-colors cursor-pointer">{tf('revops')}</li>
-                <li className="hover:text-white transition-colors cursor-pointer">{tf('practice')}</li>
-                <li className="hover:text-white transition-colors cursor-pointer">{tf('specialized')}</li>
+                <li><Link href="/solutions/revenue-maximization-protection" className="hover:text-white transition-colors">{tf('product1')}</Link></li>
+                <li><Link href="/solutions/patient-engagement-growth-ecosystem" className="hover:text-white transition-colors">{tf('product2')}</Link></li>
+                <li><Link href="/solutions/practice-infrastructure-strategic-operations" className="hover:text-white transition-colors">{tf('product3')}</Link></li>
+                <li><Link href="/solutions/cob-innovation-lab-enterprise-solutions" className="hover:text-white transition-colors">{tf('product4')}</Link></li>
               </ul>
             </div>
 
-            {/* Column 3: Resources */}
+            {/* Column 3: Services (suites 5-7) */}
             <div className="space-y-5">
               <h4 className="text-xs font-black uppercase tracking-widest text-white">
-                {tf('resources')}
+                {tf('services')}
               </h4>
               <ul className="space-y-3 text-xs font-semibold text-white/80">
-                <li className="hover:text-white transition-colors cursor-pointer">{tf('docs')}</li>
-                <li className="hover:text-white transition-colors cursor-pointer">{tf('success')}</li>
-                <li className="hover:text-white transition-colors cursor-pointer">{tf('api')}</li>
+                <li><Link href="/solutions/executive-consulting-tailored-business-development" className="hover:text-white transition-colors">{tf('service1')}</Link></li>
+                <li><Link href="/solutions/software-solutions-technology-platform" className="hover:text-white transition-colors">{tf('service2')}</Link></li>
+                <li><Link href="/solutions/dedicated-outsourcing-services" className="hover:text-white transition-colors">{tf('service3')}</Link></li>
               </ul>
             </div>
 
-            {/* Column 4: Company & Legal */}
+            {/* Column 4: Company (About Us, Resources, Support subsections) */}
             <div className="space-y-5">
               <h4 className="text-xs font-black uppercase tracking-widest text-white">
-                {tf('company')} / {tf('legal')}
+                {tf('company')}
               </h4>
-              <ul className="space-y-3 text-xs font-semibold text-white/80">
-                <li className="hover:text-white transition-colors cursor-pointer">{tf('about')}</li>
-                <li className="hover:text-white transition-colors cursor-pointer">{tf('contact')}</li>
-                <li className="hover:text-white transition-colors cursor-pointer">{tf('careers')}</li>
-                <li className="hover:text-white transition-colors cursor-pointer">{tf('privacy')}</li>
-                <li className="hover:text-white transition-colors cursor-pointer">{tf('terms')}</li>
-              </ul>
+              <div className="space-y-4">
+                <div>
+                  <p className="text-[10px] font-black uppercase tracking-wider text-white/50 mb-2">{tf('aboutUs')}</p>
+                  <ul className="space-y-2 text-xs font-semibold text-white/80">
+                    <li><Link href="/#solutions" className="hover:text-white transition-colors">{tf('ourMission')}</Link></li>
+                    <li><Link href="/#achievements" className="hover:text-white transition-colors">{tf('leadershipTeam')}</Link></li>
+                  </ul>
+                </div>
+                <div>
+                  <p className="text-[10px] font-black uppercase tracking-wider text-white/50 mb-2">{tf('resources')}</p>
+                  <ul className="space-y-2 text-xs font-semibold text-white/80">
+                    <li><Link href="/#success-stories" className="hover:text-white transition-colors">{tf('caseStudies')}</Link></li>
+                    <li><Link href="/#success-stories" className="hover:text-white transition-colors">{tf('blogArticles')}</Link></li>
+                  </ul>
+                </div>
+                <div>
+                  <p className="text-[10px] font-black uppercase tracking-wider text-white/50 mb-2">{tf('support')}</p>
+                  <ul className="space-y-2 text-xs font-semibold text-white/80">
+                    <li><Link href="/book-consultation" className="hover:text-white transition-colors">{tf('contactUs')}</Link></li>
+                    <li><Link href="/#solutions" className="hover:text-white transition-colors">{tf('clientPortal')}</Link></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Bottom Copyright & Compliances */}
+          {/* Bottom Copyright & Legal Links */}
           <div className="border-t border-white/15 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/60 font-semibold">
             <span>
               &copy; {new Date().getFullYear()} COB. {tf('rights')}
             </span>
             <div className="flex items-center gap-6">
-              <span className="hover:text-white transition-colors cursor-pointer">{tf('baa')}</span>
+              <Link href="/book-consultation" className="hover:text-white transition-colors">{tf('privacy')}</Link>
               <span className="w-1 h-1 rounded-full bg-white/20" />
-              <span className="hover:text-white transition-colors cursor-pointer">Security Portal</span>
+              <span className="hover:text-white transition-colors cursor-pointer">{tf('terms')}</span>
+              <span className="w-1 h-1 rounded-full bg-white/20" />
+              <span className="hover:text-white transition-colors cursor-pointer">{tf('baa')}</span>
             </div>
           </div>
 
