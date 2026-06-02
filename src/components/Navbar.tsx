@@ -3,9 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import { Button } from '@/components/ui/button';
 import { Link, usePathname } from '@/i18n/routing';
-import { useConsultationStore } from '@/store/useConsultationStore';
 import { Phone } from 'lucide-react';
 import { COB_PHONE_TEL } from '@/lib/contact-info';
 import { cn } from '@/lib/utils';
@@ -109,14 +107,12 @@ function SimpleColumn({
   pathname,
   currentHash,
   highlightActive = false,
-  onContactClick,
 }: {
   heading: string;
   links: NavSimpleLink[];
   pathname: string;
   currentHash: string;
   highlightActive?: boolean;
-  onContactClick?: (label: string) => void;
 }) {
   return (
     <div className="flex flex-col gap-2">
@@ -127,18 +123,6 @@ function SimpleColumn({
         const isActive =
           highlightActive && isHashHrefActive(pathname, currentHash, link.href);
 
-        if (link.label === 'Contact Us' && onContactClick) {
-          return (
-            <button
-              key={link.label}
-              type="button"
-              onClick={() => onContactClick(link.label)}
-              className={cn(simpleLinkClass(false), 'w-full text-left cursor-pointer')}
-            >
-              <div className={simpleTitleClass(false)}>{link.label}</div>
-            </button>
-          );
-        }
         return (
           <Link key={link.label} href={link.href} className={simpleLinkClass(isActive)}>
             <div className={simpleTitleClass(isActive)}>{link.label}</div>
@@ -154,7 +138,6 @@ export default function Navbar() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [currentHash, setCurrentHash] = useState('');
-  const { setFormOpen } = useConsultationStore();
 
   const productsActive = isAnySolutionMenuActive(pathname, productsColumns);
   const servicesActive = isAnySolutionMenuActive(pathname, servicesColumns);
@@ -306,7 +289,6 @@ export default function Navbar() {
                       pathname={pathname}
                       currentHash={currentHash}
                       highlightActive
-                      onContactClick={() => setFormOpen(true)}
                     />
                   ))}
                 </div>
@@ -324,12 +306,12 @@ export default function Navbar() {
             <Phone className="w-4 h-4 shrink-0" aria-hidden />
             {n('phone')}
           </a>
-          <Button
-            onClick={() => setFormOpen(true)}
-            className="bg-gradient-to-r from-[#246fb1] to-[#06b6d4] text-white rounded-full px-10 py-7 text-[13px] uppercase tracking-normal font-black transition-all duration-300 shadow-[0_4px_20px_rgba(26,86,219,0.15)] hover:from-[#1b5588] hover:to-[#048fa6] h-auto"
+          <Link
+            href="/book-consultation"
+            className="bg-gradient-to-r from-[#246fb1] to-[#06b6d4] text-white rounded-full px-10 py-7 text-[13px] uppercase tracking-normal font-black transition-all duration-300 shadow-[0_4px_20px_rgba(26,86,219,0.15)] hover:from-[#1b5588] hover:to-[#048fa6] h-auto inline-flex items-center justify-center"
           >
             {n('bookMeeting')}
-          </Button>
+          </Link>
         </div>
       </div>
     </header>

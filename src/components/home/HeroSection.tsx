@@ -15,8 +15,8 @@ import {
   Dna,
   Activity,
 } from 'lucide-react';
+import { Link } from '@/i18n/routing';
 import { Button } from '@/components/ui/button';
-import { useConsultationStore } from '@/store/useConsultationStore';
 import { useInView } from '@/hooks/useInView';
 
 const partnerLogos = [
@@ -32,49 +32,15 @@ const partnerLogos = [
 
 export const HeroSection = () => {
   const t = useTranslations('Hero');
-  const { setFormOpen } = useConsultationStore();
   const [isVisible, setIsVisible] = useState(false);
   const { ref: statsSectionRef } = useInView();
-  const [stat1Count, setStat1Count] = useState(0);
-  const [stat2Count, setStat2Count] = useState(0);
-  const [stat3Count, setStat3Count] = useState(0);
-  const [stat4Count, setStat4Count] = useState(0);
 
   useEffect(() => {
     const frame = requestAnimationFrame(() => setIsVisible(true));
 
-    const timer = setTimeout(() => {
-      setFormOpen(true);
-    }, 30000);
-
     return () => {
       cancelAnimationFrame(frame);
-      clearTimeout(timer);
     };
-  }, [setFormOpen]);
-
-  useEffect(() => {
-    const duration = 2000;
-    const steps = 60;
-    const intervalTime = duration / steps;
-    let step = 0;
-
-    const timer = setInterval(() => {
-      step++;
-      const progress = step / steps;
-      const easeProgress = progress * (2 - progress);
-
-      setStat1Count(Math.round(easeProgress * 98));
-      setStat2Count(Math.round(easeProgress * 30));
-      setStat3Count(Math.round(easeProgress * 45));
-      setStat4Count(Math.round(easeProgress * 500));
-
-      if (step >= steps) {
-        clearInterval(timer);
-      }
-    }, intervalTime);
-
-    return () => clearInterval(timer);
   }, []);
 
   return (
@@ -85,6 +51,7 @@ export const HeroSection = () => {
           src="/images/hero-bg-bridge.jpeg"
           alt="Healthcare Excellence"
           fill
+          sizes="100vw"
           className="object-cover object-center opacity-100 mix-blend-multiply"
           priority
         />
@@ -127,14 +94,13 @@ export const HeroSection = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center justify-start w-full">
-                <Button
-                  onClick={() => setFormOpen(true)}
-                  size="lg"
-                  className="bg-gradient-to-r from-[#246fb1] to-[#06b6d4] text-white rounded-full px-12 py-8 text-sm uppercase tracking-normal font-black flex items-center gap-4 group transition-all duration-300 shadow-[0_8px_30px_rgba(26,86,219,0.15)] hover:from-[#1b5588] hover:to-[#048fa6] h-auto"
+                <Link
+                  href="/book-consultation"
+                  className="inline-flex items-center gap-4 bg-gradient-to-r from-[#246fb1] to-[#06b6d4] text-white rounded-full px-12 py-8 text-sm uppercase tracking-normal font-black group transition-all duration-300 shadow-[0_8px_30px_rgba(26,86,219,0.15)] hover:from-[#1b5588] hover:to-[#048fa6] h-auto"
                 >
                   {t('bookConsultation')}
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
-                </Button>
+                </Link>
 
                 <Button
                   variant="outline"
@@ -209,7 +175,7 @@ export const HeroSection = () => {
                   <span className="relative left-[18px] text-[11px] font-black text-brand uppercase tracking-normal block text-center whitespace-nowrap mb-2">
                     {t('stat1Label')}
                   </span>
-                  <div className="text-5xl font-black text-slate-900 tracking-tighter">{stat1Count}%</div>
+                  <div className="text-5xl font-black text-slate-900 tracking-tighter">98%</div>
                   <svg className="w-[45%] h-6 mt-3 relative top-[12px] -left-2 mx-auto text-brand-primary opacity-80 overflow-visible" viewBox="0 0 120 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0,15 L35,15 L40,10 L45,25 L50,5 L55,15 L80,15 L85,10 L90,25 L95,5 L100,15 L120,15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
@@ -232,7 +198,7 @@ export const HeroSection = () => {
                   <span className="relative left-[18px] text-[11px] font-black text-brand uppercase tracking-normal block text-center whitespace-nowrap mb-2">
                     {t('stat2Label')}
                   </span>
-                  <div className="text-5xl font-black text-slate-900 tracking-tighter">{stat2Count}%</div>
+                  <div className="text-5xl font-black text-slate-900 tracking-tighter">30%</div>
                   <svg className="w-[45%] h-6 mt-3 relative top-[12px] -left-2 mx-auto text-brand-primary opacity-80 overflow-visible" viewBox="0 0 120 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <defs>
                       <linearGradient id="grad-revenue" x1="0" y1="1" x2="0" y2="0">
@@ -263,7 +229,7 @@ export const HeroSection = () => {
                   <span className="relative left-[18px] text-[11px] font-black text-brand uppercase tracking-normal block text-center whitespace-nowrap mb-2">
                     {t('stat3Label')}
                   </span>
-                  <div className="text-5xl font-black text-slate-900 tracking-tighter">{stat3Count}%</div>
+                  <div className="text-5xl font-black text-slate-900 tracking-tighter">45%</div>
                   <svg className="w-[45%] h-6 mt-3 relative top-[12px] -left-2 mx-auto text-brand-primary opacity-80 overflow-visible" viewBox="0 0 120 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0,15 Q30,5 60,25 T120,15" stroke="currentColor" strokeWidth="2" strokeDasharray="3,3" />
                     <path d="M0,15 C20,15 40,5 60,15 C80,25 100,15 120,15" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
@@ -287,7 +253,7 @@ export const HeroSection = () => {
                   <span className="relative left-[18px] text-[11px] font-black text-brand uppercase tracking-normal block text-center whitespace-nowrap mb-2">
                     {t('stat4Label')}
                   </span>
-                  <div className="text-5xl font-black text-slate-900 tracking-tighter">{stat4Count}+</div>
+                  <div className="text-5xl font-black text-slate-900 tracking-tighter">500+</div>
                   <svg className="w-[45%] h-6 mt-3 relative top-[12px] -left-2 mx-auto text-brand-primary opacity-80 overflow-visible" viewBox="0 0 120 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="60" cy="15" r="5" fill="currentColor" />
                     <circle cx="30" cy="8" r="3" fill="currentColor" opacity={0.6} />

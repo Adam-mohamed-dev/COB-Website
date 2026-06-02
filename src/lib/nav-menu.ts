@@ -165,7 +165,7 @@ export const companyMenu: { heading: string; links: NavSimpleLink[] }[] = [
   {
     heading: 'Support',
     links: [
-      { label: 'Contact Us', href: '/#solutions' },
+      { label: 'Contact Us', href: '/book-consultation' },
       { label: 'Client Portal', href: '/#solutions' },
     ],
   },

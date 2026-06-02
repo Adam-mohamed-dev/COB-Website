@@ -3,6 +3,7 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import { ShieldCheck, Bot } from 'lucide-react';
+import { Link } from '@/i18n/routing';
 import { useConsultationStore } from '@/store/useConsultationStore';
 import { ConsultationBookingForm } from '@/components/consultation/ConsultationBookingForm';
 
@@ -115,15 +116,15 @@ export default function Footer() {
         
         {/* Floating Interests Pill beside chatbot */}
         {selectedSolutions.length > 0 && (
-          <button
-            onClick={() => setFormOpen(true)}
+          <Link
+            href="/book-consultation"
             className="flex items-center gap-3 bg-gradient-to-r from-[#246fb1] to-[#06b6d4] text-white font-black uppercase text-[11px] tracking-wider px-6 py-4 rounded-full shadow-[0_10px_30px_rgba(6,182,212,0.35)] hover:shadow-[0_15px_35px_rgba(6,182,212,0.5)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 animate-bounce cursor-pointer border-0"
           >
             <span className="flex items-center justify-center w-5 h-5 rounded-full bg-white text-[#246fb1] text-[9px] font-black animate-pulse">
               {selectedSolutions.length}
             </span>
             <span>Book Selected ({selectedSolutions.length})</span>
-          </button>
+          </Link>
         )}
 
         <div className="relative">

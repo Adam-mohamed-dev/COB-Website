@@ -1,6 +1,5 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useInView } from '@/hooks/useInView';
@@ -88,43 +87,12 @@ export const AchievementsSection = () => {
   const w = useTranslations('WhyChoose');
   const { ref: sectionRef, isInView } = useInView();
 
-  const [achVolume, setAchVolume] = useState(0.0);
-  const [achAccuracy, setAchAccuracy] = useState(80.0);
-  const [achSpeed, setAchSpeed] = useState(60);
-  const [achCapacity, setAchCapacity] = useState(0);
-
-  useEffect(() => {
-    if (!isInView) return;
-
-    const duration = 2000;
-    const steps = 60;
-    const intervalTime = duration / steps;
-    let step = 0;
-
-    const timer = setInterval(() => {
-      step++;
-      const progress = step / steps;
-      const easeProgress = progress * (2 - progress);
-
-      setAchVolume(easeProgress * 1.2);
-      setAchAccuracy(80.0 + easeProgress * (99.8 - 80.0));
-      setAchSpeed(Math.round(60 - easeProgress * (60 - 15)));
-      setAchCapacity(Math.round(easeProgress * 10));
-
-      if (step >= steps) {
-        clearInterval(timer);
-      }
-    }, intervalTime);
-
-    return () => clearInterval(timer);
-  }, [isInView]);
-
   const metrics: MetricConfig[] = [
     {
       index: 0,
       label: '01 / VOLUMES MANAGED',
       tKey: 'pillar1',
-      value: achVolume,
+      value: 1.2,
       suffix: 'B+',
       prefix: '$',
       svg: <MetricWaveSvg />,
@@ -133,7 +101,7 @@ export const AchievementsSection = () => {
       index: 1,
       label: '02 / BILLING ACCURACY',
       tKey: 'pillar2',
-      value: achAccuracy,
+      value: 99.8,
       suffix: '%',
       svg: <EcgWaveSvg />,
     },
@@ -141,7 +109,7 @@ export const AchievementsSection = () => {
       index: 2,
       label: '03 / OPERATIONS SPEED',
       tKey: 'pillar3',
-      value: achSpeed,
+      value: 15,
       suffix: 'm',
       prefix: '<',
       svg: <TelemetryWaveSvg />,
@@ -150,7 +118,7 @@ export const AchievementsSection = () => {
       index: 3,
       label: '04 / CLINICAL CAPACITY',
       tKey: 'pillar4',
-      value: achCapacity,
+      value: 10,
       suffix: 'k+',
       svg: <DnaWaveSvg />,
     },
@@ -164,12 +132,13 @@ export const AchievementsSection = () => {
     >
       {/* Immersive Background Layer */}
       <div className="absolute inset-0 z-0 w-full h-full">
-        <Image
-          src="/images/hero-bg1.jpeg"
-          alt="Healthcare Excellence Background"
-          fill
-          className="object-cover object-center opacity-100 mix-blend-multiply"
-        />
+          <Image
+            src="/images/hero-bg1.jpeg"
+            alt="Healthcare Excellence Background"
+            fill
+            sizes="100vw"
+            className="object-cover object-center opacity-100 mix-blend-multiply"
+          />
         <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/80 to-white" />
       </div>
 
@@ -202,12 +171,10 @@ export const AchievementsSection = () => {
               metric={metric}
               animatedValue={
                 metric.index === 0
-                  ? achVolume.toFixed(1)
+                  ? metric.value.toFixed(1)
                   : metric.index === 1
-                    ? achAccuracy.toFixed(1)
-                    : metric.index === 2
-                      ? String(achSpeed)
-                      : String(achCapacity)
+                    ? metric.value.toFixed(1)
+                    : String(metric.value)
               }
               ref={sectionRef}
             />

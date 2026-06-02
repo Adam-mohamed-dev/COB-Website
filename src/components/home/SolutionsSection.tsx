@@ -2,12 +2,14 @@
 
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
+import Image from 'next/image';
 import { useInView } from '@/hooks/useInView';
 import { SectionEcgDividers } from '@/components/solutions/SectionEcgDividers';
 
 interface CardConfig {
   tKey: string;
   href: string;
+  imageSrc?: string;
   svg: (props: { className?: string }) => React.ReactNode;
 }
 
@@ -138,13 +140,13 @@ const TeamSvg = ({ className }: { className?: string }) => (
 );
 
 const cards: (CardConfig & { spanFull?: boolean })[] = [
-  { tKey: 'core', href: '/solutions/revenue-maximization-protection', svg: ClaimDashboardSvg },
-  { tKey: 'revops', href: '/solutions/patient-engagement-growth-ecosystem', svg: MetricDialSvg },
-  { tKey: 'practice', href: '/solutions/practice-infrastructure-strategic-operations', svg: InteropHubSvg },
-  { tKey: 'specialized', href: '/solutions/cob-innovation-lab-enterprise-solutions', svg: GaugeSvg },
-  { tKey: 'consulting', href: '/solutions/executive-consulting-tailored-business-development', svg: ConsultingHubSvg },
-  { tKey: 'technology', href: '/solutions/software-solutions-technology-platform', svg: SyncGaugeSvg },
-  { tKey: 'outsourcing', href: '/solutions/dedicated-outsourcing-services', svg: TeamSvg, spanFull: true },
+  { tKey: 'core', href: '/solutions/revenue-maximization-protection', imageSrc: '/images/revenue-max.jpeg', svg: ClaimDashboardSvg },
+  { tKey: 'revops', href: '/solutions/patient-engagement-growth-ecosystem', imageSrc: '/images/Patient-Engagement-growth-card.jpeg', svg: MetricDialSvg },
+  { tKey: 'practice', href: '/solutions/practice-infrastructure-strategic-operations', imageSrc: '/images/sol-card-3.jpeg', svg: InteropHubSvg },
+  { tKey: 'specialized', href: '/solutions/cob-innovation-lab-enterprise-solutions', imageSrc: '/images/sol-card-4.jpeg', svg: GaugeSvg },
+  { tKey: 'consulting', href: '/solutions/executive-consulting-tailored-business-development', imageSrc: '/images/sol-card-5.jpeg', svg: ConsultingHubSvg },
+  { tKey: 'technology', href: '/solutions/software-solutions-technology-platform', imageSrc: '/images/sol-card-6.jpeg', svg: SyncGaugeSvg },
+  { tKey: 'outsourcing', href: '/solutions/dedicated-outsourcing-services', imageSrc: '/images/sol-card-7.jpeg', svg: TeamSvg, spanFull: true },
 ];
 
 const SolutionCard = ({
@@ -166,7 +168,19 @@ const SolutionCard = ({
         card.spanFull ? 'lg:col-span-2 max-w-3xl mx-auto' : ''
       } ${isInView ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}
     >
-      <Svg className="w-[380px] h-[240px] mx-auto overflow-visible mb-8 group-hover:scale-105 transition-transform duration-500" />
+      {card.imageSrc ? (
+        <div className="w-[380px] h-[240px] relative mb-8 rounded-2xl overflow-hidden group-hover:scale-105 transition-transform duration-500">
+          <Image
+            src={card.imageSrc}
+            alt=""
+            fill
+            sizes="(max-width: 1024px) 100vw, 380px"
+            className="object-cover object-center"
+          />
+        </div>
+      ) : (
+        <Svg className="w-[380px] h-[240px] mx-auto overflow-visible mb-8 group-hover:scale-105 transition-transform duration-500" />
+      )}
       <h3 className="text-3xl font-black text-slate-900 tracking-[-0.02em] mb-4">{s(`${card.tKey}.tab`)}</h3>
       <p className="text-slate-500 text-[15px] leading-relaxed mb-8 max-w-lg mx-auto">
         {s(`${card.tKey}.description`)}

@@ -104,6 +104,7 @@ export default function ServiceClientPage({ solution, service }: Props) {
             src={bgImageSrc}
             alt=""
             fill
+            sizes="100vw"
             className="object-cover object-center opacity-100 mix-blend-multiply"
             priority
           />
@@ -237,6 +238,7 @@ export default function ServiceClientPage({ solution, service }: Props) {
                   src={bgImageSrc}
                   alt=""
                   fill
+                  sizes="100vw"
                   className="object-cover object-center mix-blend-multiply opacity-50 grayscale"
                 />
                 <div className="absolute inset-0 bg-white/85 backdrop-blur-[2px]" />

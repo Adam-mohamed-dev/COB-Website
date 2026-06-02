@@ -7,6 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { useConsultationStore } from '@/store/useConsultationStore';
 import { solutionsData } from '@/lib/solutions-data';
+import { cn } from '@/lib/utils';
 import {
   type ConsultationTimeSlot,
   formatSelectedDateTime,
@@ -19,9 +20,10 @@ type OrgType = (typeof ORG_TYPES)[number];
 
 type ConsultationBookingFormProps = {
   onClose: () => void;
+  variant?: 'sidebar' | 'page';
 };
 
-export const ConsultationBookingForm = ({ onClose }: ConsultationBookingFormProps) => {
+export const ConsultationBookingForm = ({ onClose, variant = 'sidebar' }: ConsultationBookingFormProps) => {
   const f = useTranslations('Hero.Form');
   const locale = useLocale();
   const { selectedSolutions, removeSolution } = useConsultationStore();
@@ -88,15 +90,22 @@ export const ConsultationBookingForm = ({ onClose }: ConsultationBookingFormProp
       : '';
 
   return (
-    <div className="relative w-full max-w-[650px] bg-[#fcfdfe]/98 backdrop-blur-3xl h-full shadow-[-25px_0_80px_rgba(0,0,0,0.08)] p-12 lg:p-16 overflow-y-auto animate-slide-in-right border-l border-slate-100 z-[110]">
-      <button
-        type="button"
-        onClick={handleClose}
-        className="absolute top-8 right-8 p-3 rounded-full bg-slate-100/80 hover:bg-slate-200/80 hover:rotate-90 transition-all duration-300 group cursor-pointer border-0"
-        aria-label={f('close')}
-      >
-        <X className="w-5 h-5 text-slate-600 group-hover:text-slate-900 transition-colors" />
-      </button>
+    <div className={cn(
+      'relative w-full overflow-y-auto',
+      variant === 'sidebar'
+        ? 'max-w-[650px] bg-[#fcfdfe]/98 backdrop-blur-3xl p-12 lg:p-16 h-full shadow-[-25px_0_80px_rgba(0,0,0,0.08)] animate-slide-in-right border-l border-slate-100 z-[110]'
+        : 'bg-transparent'
+    )}>
+      {variant === 'sidebar' && (
+        <button
+          type="button"
+          onClick={handleClose}
+          className="absolute top-8 right-8 p-3 rounded-full bg-slate-100/80 hover:bg-slate-200/80 hover:rotate-90 transition-all duration-300 group cursor-pointer border-0"
+          aria-label={f('close')}
+        >
+          <X className="w-5 h-5 text-slate-600 group-hover:text-slate-900 transition-colors" />
+        </button>
+      )}
 
       {isComplete ? (
         <div className="pt-16 flex flex-col items-center text-center animate-in fade-in duration-300">
